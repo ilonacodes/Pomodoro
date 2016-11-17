@@ -54,7 +54,7 @@
         it("is stopped after 25 minutes and switches to pause", function () {
             var message = "";
             var tomato = new Tomato(function () {
-                message = "break time!";
+                message = tomato.status() + " time!";
             });
 
             tomato.start(1000);
@@ -65,7 +65,7 @@
 
             tomato.update(2500);
             expect(tomato.minutesLeft()).toEqual(5);
-            expect(message).toEqual("break time!");
+            expect(message).toEqual("pause time!");
             expect(tomato.status()).toEqual("pause");
         });
 

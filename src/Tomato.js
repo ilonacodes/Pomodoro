@@ -46,8 +46,8 @@ window.Tomato = (function () {
 
         if (this.minutesLeft() === 0) {
             this.stop();
-            this.callback();
             this.currentStatus = this.nextStatus();
+            this.callback();
         }
     };
 
