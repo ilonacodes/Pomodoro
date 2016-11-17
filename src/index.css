@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    background-color: #ffffcc;
+    color: #0000ff;
+    text-align: center;
+}
+
+.clock_space {
+    height: 250px;
+    width: 250px;
+    border: 5px solid #e63900;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 25px auto;
+}
+
+.clock_space.pause {
+    border: 5px solid greenyellow;
+}
+
+.clock_space.pause.pulsating {
+    -webkit-animation-name: greenPulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.clock_space.work.pulsating {
+    -webkit-animation-name: redPulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes greenPulse {
+    from { border-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+    50% { border-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09; }
+    to { border-color: #749a02; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+@-webkit-keyframes redPulse {
+    from { border-color: darkred; -webkit-box-shadow: 0 0 9px #333; }
+    50% { border-color: red; -webkit-box-shadow: 0 0 18px red; }
+    to { border-color: darkred; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+.clock_space .name, .time {
+    font-size: 40px;
+    margin-top: 40px;
+    color: black;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+.settings div {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.settings .set {
+    display: inline-block;
+    margin: 5px;
+}
+
+.settings button {
+    color: blue;
+    background-color: #ffffcc;
+    outline: 0;
+    border: 0;
+}
+
+.settings button:hover {
+    cursor: pointer;
+}
+
+.settings #pause, #work, button {
+    font-size: 40px;
+}
+
+.settings .pause p {
+    color: black;
+    font-size: 25px;
+}
+
+.settings .session p {
+    color: black;
+    font-size: 25px;
+}
+
+.settings {
+    margin: 30px;
+}

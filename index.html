@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="src/index.css">
+</head>
+<body>
+<h1>Pomodoro Clock</h1>
+
+<div class="settings">
+    <div class="pause">
+        <p>Pause</p>
+        <div>
+            <button class="set" id="lessPause">-</button>
+            <p class="set" id="pause">5</p>
+            <button class="set" id="morePause">+</button>
+        </div>
+    </div>
+
+    <div class="session">
+        <p>Session</p>
+        <div>
+            <button class="set" id="lessWork">-</button>
+            <p class="set" id="work">25</p>
+            <button class="set" id="moreWork">+</button>
+        </div>
+    </div>
+</div>
+
+<div class="clock_space" id="round">
+    <p class="name">Session</p>
+    <p class="time">25</p>
+</div>
+
+<script src="lib/jquery-3.1.1.min.js"></script>
+<script src="src/Settings.js"></script>
+<script src="src/Tomato.js"></script>
+<script src="src/index.js"></script>
+
+</body>
+</html>
