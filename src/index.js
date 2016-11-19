@@ -37,6 +37,7 @@ $moreSession.click(function () {
 
 setInterval(function () {
     tomato.update(now());
+    $round.find(".name").text(tomato.status());
     $round.find(".time").text(tomato.minutesLeft());
     $round.toggleClass("session", tomato.status() === "session");
     $round.toggleClass("pause", tomato.status() === "pause");

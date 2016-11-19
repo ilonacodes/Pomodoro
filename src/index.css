@@ -48,6 +48,10 @@ body {
     color: black;
 }
 
+.clock_space .name {
+    text-transform: capitalize;
+}
+
 h1 {
     font-size: 60px;
 }
