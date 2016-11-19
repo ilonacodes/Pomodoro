@@ -24,7 +24,7 @@ body {
     -webkit-animation-iteration-count: infinite;
 }
 
-.clock_space.work.pulsating {
+.clock_space.session.pulsating {
     -webkit-animation-name: redPulse;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
@@ -73,7 +73,7 @@ h1 {
     cursor: pointer;
 }
 
-.settings #pause, #work, button {
+.settings #pause, #session, button {
     font-size: 40px;
 }
 

@@ -5,7 +5,7 @@
         it("initially is set to 25", function () {
             var tomato = new Tomato();
             expect(tomato.minutesLeft()).toEqual(25);
-            expect(tomato.status()).toEqual("work");
+            expect(tomato.status()).toEqual("session");
         });
 
         it("initially is set to 25 even after update", function () {
@@ -83,7 +83,7 @@
             expect(tomato.status()).toEqual("pause");
         });
 
-        it("is stopped after 5 minutes in pause and switches to work", function () {
+        it("is stopped after 5 minutes in pause and switches to session", function () {
             var tomato = new Tomato();
             tomato.start(1000);
             tomato.update(2500);
@@ -91,13 +91,13 @@
             tomato.start(2600);
             tomato.update(2900);
 
-            expect(tomato.status()).toEqual("work");
+            expect(tomato.status()).toEqual("session");
         });
 
-        it("can have custom work time", function () {
+        it("can have custom session time", function () {
             var settings = new Settings();
             var tomato = new Tomato(null, settings);
-            settings.decreaseWorkTime();
+            settings.decreaseSessionTime();
 
             tomato.start(1000);
             tomato.update(2440);
@@ -115,7 +115,7 @@
             tomato.start(2600);
             tomato.update(2840);
 
-            expect(tomato.status()).toEqual("work");
+            expect(tomato.status()).toEqual("session");
         });
         
     });

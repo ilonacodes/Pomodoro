@@ -1,8 +1,8 @@
 var $round = $("#round");
 var $lessPause = $("#lessPause");
 var $morePause = $("#morePause");
-var $lessWork = $("#lessWork");
-var $moreWork = $("#moreWork");
+var $lessSession = $("#lessSession");
+var $moreSession = $("#moreSession");
 
 function onStatusChange() {
     alert("It's time for a " + tomato.status() + "!");
@@ -23,27 +23,24 @@ $lessPause.click(function () {
     settings.decreasePauseTime();
 });
 
-$lessWork.click(function () {
-    settings.decreaseWorkTime();
+$lessSession.click(function () {
+    settings.decreaseSessionTime();
 });
 
 $morePause.click(function () {
     settings.increasePauseTime();
 });
 
-$moreWork.click(function () {
-    settings.increaseWorkTime();
+$moreSession.click(function () {
+    settings.increaseSessionTime();
 });
 
 setInterval(function () {
     tomato.update(now());
     $round.find(".time").text(tomato.minutesLeft());
-    $round.toggleClass("work", tomato.status() === "work");
+    $round.toggleClass("session", tomato.status() === "session");
     $round.toggleClass("pause", tomato.status() === "pause");
     $round.toggleClass("pulsating", tomato.started);
-    $(".settings #work").text(settings.workTime());
+    $(".settings #session").text(settings.sessionTime());
     $(".settings #pause").text(settings.pauseTime());
 }, 100);
-
-
-

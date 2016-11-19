@@ -2,24 +2,24 @@ window.Settings = (function () {
     "use strict";
 
     function Settings() {
-        this.workTimeValue = 25;
+        this.sessionTimeValue = 25;
         this.pauseTimeValue = 5;
     }
 
-    Settings.prototype.workTime = function () {
-        return this.workTimeValue;
+    Settings.prototype.sessionTime = function () {
+        return this.sessionTimeValue;
     };
 
     Settings.prototype.pauseTime = function () {
         return this.pauseTimeValue;
     };
 
-    Settings.prototype.increaseWorkTime = function () {
-        this.workTimeValue++;
+    Settings.prototype.increaseSessionTime = function () {
+        this.sessionTimeValue++;
     };
 
-    Settings.prototype.decreaseWorkTime = function () {
-        this.workTimeValue--;
+    Settings.prototype.decreaseSessionTime = function () {
+        this.sessionTimeValue--;
     };
 
     Settings.prototype.increasePauseTime = function () {

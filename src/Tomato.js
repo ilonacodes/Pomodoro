@@ -8,7 +8,7 @@ window.Tomato = (function () {
         this.startTime = 0;
         this.currentTime = 0;
         this.started = false;
-        this.currentStatus = "work";
+        this.currentStatus = "session";
     }
 
     Tomato.prototype.minutesLeft = function () {
@@ -16,8 +16,8 @@ window.Tomato = (function () {
     };
 
     Tomato.prototype.minutesTotal = function () {
-        if (this.status() === "work") {
-            return this.settings.workTime();
+        if (this.status() === "session") {
+            return this.settings.sessionTime();
         }
         return this.settings.pauseTime();
     };
@@ -52,10 +52,10 @@ window.Tomato = (function () {
     };
 
     Tomato.prototype.nextStatus = function () {
-        if(this.status() === "work") {
+        if(this.status() === "session") {
             return "pause";
         } else {
-            return "work";
+            return "session";
         }
     };
 
