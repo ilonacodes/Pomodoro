@@ -69,6 +69,20 @@
             expect(tomato.status()).toEqual("pause");
         });
 
+        it("is stopped after 50 minutes and switches to pause", function () {
+            var message = "";
+            var tomato = new Tomato(function () {
+                message = tomato.status() + " time!";
+            });
+
+            tomato.start(1000);
+
+            tomato.update(4000);
+            expect(tomato.minutesLeft()).toEqual(5);
+            expect(message).toEqual("pause time!");
+            expect(tomato.status()).toEqual("pause");
+        });
+
         it("is stopped after 5 minutes in pause and switches to work", function () {
             var tomato = new Tomato();
             tomato.start(1000);

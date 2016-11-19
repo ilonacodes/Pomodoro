@@ -44,7 +44,7 @@ window.Tomato = (function () {
     Tomato.prototype.update = function (time) {
         this.currentTime = time;
 
-        if (this.minutesLeft() === 0) {
+        if (this.minutesLeft() <= 0) {
             this.stop();
             this.currentStatus = this.nextStatus();
             this.callback();
